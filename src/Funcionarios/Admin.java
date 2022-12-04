@@ -1,6 +1,11 @@
 package Funcionarios;
 
-public class Admin extends Funcionario {
+import Clientes.Cliente;
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class Admin extends Funcionario implements ExibeFuncionario {
 
 
     public Admin(String nome, int id, String cargo) {
@@ -14,5 +19,17 @@ public class Admin extends Funcionario {
                 ", id=" + id +
                 ", cargo='" + cargo + '\'' +
                 '}';
+    }
+
+    @Override
+    public void Exibe() {
+        HashSet<Admin> admins = new HashSet<Admin>();
+        admins.add(new Admin("JULIA", 123, "administrador"));
+        admins.add(new Admin("VANESSA", 456, "administrador"));
+
+        Iterator<Admin> iterator = admins.iterator();
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next() + " ");
+        }
     }
 }

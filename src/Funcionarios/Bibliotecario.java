@@ -1,6 +1,9 @@
 package Funcionarios;
 
-public class Bibliotecario extends Funcionario implements Emprestimo {
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class Bibliotecario extends Funcionario implements ExibeFuncionario {
     public Bibliotecario(String nome, int id, String cargo) {
         super(nome, id, cargo);
     }
@@ -14,8 +17,17 @@ public class Bibliotecario extends Funcionario implements Emprestimo {
                 '}';
     }
 
-    @Override
-    public void emprestaMaterial() {
 
+    @Override
+    public void Exibe() {
+        HashSet<Bibliotecario> bibliotecarios = new HashSet<Bibliotecario>();
+        bibliotecarios.add(new Bibliotecario("JULIA", 123, "administrador"));
+        bibliotecarios.add(new Bibliotecario("VANESSA", 456, "administrador"));
+
+        Iterator<Bibliotecario> iterator = bibliotecarios.iterator();
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next() + " ");
+
+        }
     }
 }

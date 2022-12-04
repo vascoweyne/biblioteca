@@ -42,8 +42,8 @@ public class MaterialEspecial extends MaterialInformacional implements Cadastro 
             System.out.println("digite o numero de  exemplares disponivel");
             exemplaresDisponivel = entrada.nextInt();
             System.out.println("digite o nome");
-            nome = entrada.nextLine();
             entrada.nextLine();
+            nome = entrada.nextLine();
             System.out.println("digite a tipo ");
             tipo = entrada.nextLine();
 

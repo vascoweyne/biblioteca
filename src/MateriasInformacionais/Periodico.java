@@ -1,10 +1,14 @@
 package MateriasInformacionais;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Periodico extends MaterialInformacional implements Cadastro {
     public Periodico(int codigoDeBarra, int numeroDaEstante, int exemplares, int exemplaresDisponivel, String nome) {
         super(codigoDeBarra, numeroDaEstante, exemplares, exemplaresDisponivel, nome);
+    }
+
+    public Periodico() {
     }
 
     @Override
@@ -33,6 +37,12 @@ public class Periodico extends MaterialInformacional implements Cadastro {
             exemplaresDisponivel = entrada.nextInt();
             System.out.println("digite o nome");
             nome = entrada.nextLine();
+            ArrayList<Periodico> periodicos = new ArrayList<>();
+            Periodico p = new Periodico(codigoDeBarra, numeroDaEstante, exemplares, exemplaresDisponivel, nome);
+            periodicos.add(p);
+            for (int j = 0; j < periodicos.size(); j++) {
+                System.out.println(periodicos.get(j));
+            }
         }
     }
 }
