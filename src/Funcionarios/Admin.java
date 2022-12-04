@@ -32,4 +32,9 @@ public class Admin extends Funcionario implements ExibeFuncionario {
             System.out.print(iterator.next() + " ");
         }
     }
+
+    @Override
+    public void batePonto() {
+        System.out.println("8:00");
+    }
 }

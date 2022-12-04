@@ -11,8 +11,12 @@ public abstract class Funcionario {
         this.cargo = cargo;
     }
 
-    public void recebeSalario(){
+
+    public void batePonto(){
 
     }
+
+
+
 
 }

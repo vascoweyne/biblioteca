@@ -30,4 +30,11 @@ public class Bibliotecario extends Funcionario implements ExibeFuncionario {
 
         }
     }
+
+
+
+    @Override
+    public void batePonto() {
+        System.out.println("6:00");
+    }
 }
