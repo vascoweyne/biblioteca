@@ -1,4 +1,4 @@
-package Clientes;
+package Sistema.Pessoa.Clientes;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -25,8 +25,8 @@ public class Cliente {
 
     public void identificaCliente() {
         HashSet<Cliente> clientes = new HashSet<Cliente>();
-        clientes.add(new Cliente("JULIA", 123));
-        clientes.add(new Cliente("VANESSA", 456));
+        clientes.add(new Cliente("Jessica", 5834));
+        clientes.add(new Cliente("Lara", 7898));
 
         Iterator<Cliente> iterator = clientes.iterator();
         while (iterator.hasNext()) {
